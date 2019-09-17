@@ -1,0 +1,1 @@
+1、apt_anonotation 和 apt_anomation_processor是java library,而不是android library, 因为android 默认不包含注解处理器,是在java 类库中

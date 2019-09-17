@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':apt_annotation')
+    // 不手动配置meta-info/services下配置文件的话，可以使用第三方注解组件让生成这个文件
+    api 'com.google.auto.service:auto-service:1.0-rc2'
+    // 不手动生成java的文件里的代码，及替换ClassCreatoProxy的generateJavaCode
+    api 'com.squareup:javapoet:1.10.0'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
